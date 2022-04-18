@@ -1,26 +1,24 @@
-// Implement simple Event Emitter class.
-// In short - it should be able to register callbacks for events, 
+// Yet another isPalindrome function.
+//
+// palindromes - a word, phrase, or sequence that reads the same backwards as forwards
+// Example palindromes:
+// abcba, 12321, qweewq
 // 
-// Usage examples:
-// emiter.emit('event-type', data); // send event
-// 
-// emiter.on('event-type', callback); // listen for event type
-// emiter.off('event-type', callback); // remove listener for event type
+// Input:
+//  a string (no need to check input type)
+//  you do not have to handle string with whitespaces
+// Output:
+//  boolean, indicating if string is a palindromes
 
-class EventEmitter {
-
+function isPalindrome(value /* string */) {
 }
 
 // Tests
 
-const emitter = new EventEmitter();
-
-const callback = (data) => console.log('received event with data', data);
-
-emitter.on('test-event', callback);
-emitter.emit('test-event', { test: 42 });
-// should run callback
-
-emitter.off('test-event', callback);
-emitter.emit('test-event', { test: 42 });
-// should not do anything
+console.log('should be true', isPalindrome('madam'));
+console.log('should be true', isPalindrome('kayak'));
+console.log('should be true', isPalindrome('racecar'));
+console.log('should be true', isPalindrome('noon'));
+console.log('should be true', isPalindrome(''));
+console.log('should be false', isPalindrome('other'));
+console.log('should be false', isPalindrome('javascript'));
